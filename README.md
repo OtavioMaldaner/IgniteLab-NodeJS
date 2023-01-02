@@ -12,14 +12,12 @@
   * Ao criar um projeto, ele já vem com sua estrutura pré-definida que o desenvolvedor deve seguir ao implementar a aplicação
   * Uso de TypeScript e Decorators
 ## Criando a aplicação
-### Para criar a aplicação em NestJS basta executar os códigos abaixo
+Para criar a aplicação em NestJS basta executar os códigos abaixo
 ```bash
 npm i -g @nestjs/cli
 nest new notification-service
 ```
-### O primeiro comando irá instalar a interface de linha de comando da framework. Ao executar o segundo comando, irá pedir qual é o gerenciador de pacotes que você deseja utilizar. Ao escolher o pacote, basta navegar até ele e pressionar a tecla "Enter" para continuar a criação do projeto
-Para rodar o projeto basta entrar no diretório raiz e executar o comando 
-```
-npm run start:dev
-```
+O primeiro comando irá instalar a interface de linha de comando da framework. Ao executar o segundo comando, irá pedir qual é o gerenciador de pacotes que você deseja utilizar. Ao escolher o pacote, basta navegar até ele e pressionar a tecla "Enter" para continuar a criação do projeto
+Para rodar o projeto basta entrar no diretório raiz e executar o comando `npm run start:dev`
 Com o comando já executado, você pode entrar no navegador e acessar a aplicação no `localhost:3000`. A porta que o projeto será executado pode variar se você estiver executando outros projetos simultaneamente
+#### Para saber mais informações sobre os comandos, acesse a [documentação do NestJS](https://docs.nestjs.com/)
