@@ -1,73 +1,25 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
+# IgniteLab - NodeJS
+### Evento realizado pela Rocketseat focado no desenvlovimento do back-end utilizando o NodeJS
+## Conteúdo Teórico
+### O que são microsserviços
+* Grandes empresas como Uber, LinkedIn e outros grandes e-commerces estão utilizando bastante
+* Na arquitetura monolito, o código está sempre junto e em conversa com o banco de dados de maneira simples. No entanto, em uma aplicação muito grande, esta arquitetura vai precisar de mais memória RAM e processamento para executar os processos. Também pode acontecer de em caso de bug em uma parte da aplicação, tornar uma outra parte da aplicação falha
+* Utilizando microsserviços, a aplicação é dividida em aplicações menores, tornando cada aplicação menor "independednte", assim dificilmente acarretando em problemas em outras partes da aplicação geral.
+  * Cada microsserviço possui seu próprio banco de dados, o que acarreta em duplicidade de dados, pois com a independência das tarefas, acaba dificultando a comunicação entre os microsserviços
+  * Quando um microsserviço é executado, é comum ter o registro no seu banco de dados e também ser enviada uma "mensagem" com os registros da ação, assim os outros microsserviços podem ter acesso de maneira facilitada as informações. Quando a mensagem é enviada, as aplicações que necessitam das informações que foram enviadas captam estas informações e armazenam no seu banco de dados as informações que são necessárias para a sua aplicação
+### Sobre o desenvolvimento da aplicação
+* Utilização da framework NestJS
+  * Ao criar um projeto, ele já vem com sua estrutura pré-definida que o desenvolvedor deve seguir ao implementar a aplicação
+  * Uso de TypeScript e Decorators
+## Criando a aplicação
+### Para criar a aplicação em NestJS basta executar os códigos abaixo
 ```bash
-$ npm install
+npm i -g @nestjs/cli
+nest new notification-service
 ```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+### O primeiro comando irá instalar a interface de linha de comando da framework. Ao executar o segundo comando, irá pedir qual é o gerenciador de pacotes que você deseja utilizar. Ao escolher o pacote, basta navegar até ele e pressionar a tecla "Enter" para continuar a criação do projeto
+Para rodar o projeto basta entrar no diretório raiz e executar o comando 
 ```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run start:dev
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Com o comando já executado, você pode entrar no navegador e acessar a aplicação no `localhost:3000`. A porta que o projeto será executado pode variar se você estiver executando outros projetos simultaneamente
