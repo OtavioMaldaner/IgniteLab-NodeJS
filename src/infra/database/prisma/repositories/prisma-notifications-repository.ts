@@ -12,6 +12,9 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
     async findById(notificationId: string): Promise<Notification | null> {
         throw new Error("Method not implemented.");
     }
+    countManyByRecipientId(recipientId: string): Promise<number> {
+        throw new Error("Method not implemented.");
+    }
     async create(notification: Notification): Promise<void> {
         const notificationRegister = PrismaNotificationMapper.toPrisma(notification);
         await this.prismaService.notification.create({
